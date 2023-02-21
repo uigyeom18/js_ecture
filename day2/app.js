@@ -116,9 +116,135 @@ history.forward(); // 방문한 사이트 중에 이동 (만약 x 이동안함)
 navigator.language;
 console.log(navigator.onLine); // 유저가 온라인 여부 반환(boolean)
 
-
-
 //3. 문서 객체 모델 (DOM) : HTML 문서 구조
+
+
+// 함수 : js 코드의 묶음 . function 키워드를 사용하거나 , arrow 함수 형태
+// 데이터를 전달받아 사용할 수 있으며, 실행 결과를 반환할 수도 있다
+
+
+
+//1. 함수 정의 방법
+function sayHi(){
+    // .....
+    console.log("hi1")
+}
+
+// 2. 익명 함수 
+const sayHi2 = function() {
+    console.log("hi2")
+}
+
+//3. es6에서 등장한 화살표 함수
+
+const sayHi3 = () => {
+    console.log("hi1")
+}
+
+sayHi();
+sayHi2();
+sayHi3();
+
+
+//4. function 생성자
+// const sayHi4 = new Function('name', 'console.log("hi)')
+
+// 매개변수 : 함수를 실행하기 우히 필요한 값을
+// 함수 외부에서 내부로 전달하기 위해 사용
+
+// 매기변수 parmeter -> 함수를 정의할 때 선언, 함수 내부에서 변수 처럼 사용
+// 인수 argumnets ->  함수를 호출할 때 지정. 개수 , 타입에 재한 X
+
+function add2(x,y){
+    x = x || 0;
+    y = y || 0;
+}
+
+
+
+function add(x,y){
+    console.log(x+y);
+    return x+y;
+}
+
+// 함수 호출
+// console.log(add(1,2));
+
+//JS에서의 함수-> 매개변수의 개수 체크 X 인수의 개수X
+// 인수가 부족(덜 전달) -> 함수 내부에서는 부족한 데이터는 undefined 처리.
+// console.log(add(1));
+// 인수가 과함 (더 전달) -> 무시 ( 버려지지 않고 , arguments  객체에 저장)
+// console.log(add(1,2,3,));
+
+
+// function f2(...params){
+//     console.log(parmas);
+//    return Array.from(argments) params.filter((data) => data >=5)
+// }
+// console.log(f2(1,2,3,4,5,6,7));
+console.log(...[1,2,3]);
+console.log(..."goodbye~~");
+
+// 1.함수 호출시 인수에서 사용하는 경우
+const numbers= [1,2,3,4,5,56,76,4,3,3,4,56,6,7,7,6]
+console.log(Math.max(numbers));
+console.log(Math.max(...numbers));
+
+// ~ESC
+
+
+// 2. 배열 내부에서 사용하는 경우
+console.log([1,2].concat([3,4]));
+const arr = [...[1,2], ...[3,4]];
+console.log(arr);
+
+const arr1 = [1,4];
+const arr2 = [2,4];
+
+arr1.splice(1,0,...arr2); // [1,[2,3]4]
+
+const origin = [10,20]
+const copy = origin.slice();
+
+const trendCopy = [...origin];
+
+const obj1 = {x:1 , y:2};
+const copyOfj1 = { ...obj1};
+
+const merged = {x:1, Y:2,...{a:3,b:4}};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
