@@ -107,7 +107,7 @@ console.log(location.host);// 호스트 (서버주소) & 포트번호 변환
 
 
 // history : 사용자가 방문한 사이트의 기록 , 이전 방문, 다음 방문 한번씩 제어가 가능함
-//history.length : 방문기록에 저장된 목록 개수
+//history.length : 방문기록에 저장된 목록 개수 
 history.back();// 이전 방문 사이트로 이동 (만약 x 이동안함)
 history.forward(); // 방문한 사이트 중에 이동 (만약 x 이동안함)
 
